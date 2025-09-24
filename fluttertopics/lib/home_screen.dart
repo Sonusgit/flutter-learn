@@ -10,6 +10,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find<TopicController>();
     final FocusNode searchFocusNode = FocusNode();
+        final TranslationController translationController = Get.find<TranslationController>();
+
 
     return Scaffold(
       appBar: AppBar(
@@ -18,6 +20,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.language),
             onPressed: () {
+              translationController.toggleLanguage;
               // Language toggle functionality can be added here
             },
           ),

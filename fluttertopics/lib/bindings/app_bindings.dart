@@ -6,7 +6,7 @@ class AppBindings extends Bindings {
   @override
   void dependencies() {
     Get.put(ApiService(), permanent: true);
-    // Get.put(TranslationController(), permanent: true);
+    Get.put(TranslationController(), permanent: true);
     Get.put(TopicController());
   }
 }

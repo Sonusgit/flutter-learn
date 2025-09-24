@@ -230,3 +230,16 @@ class TopicController extends GetxController {
     recentSearches.clear();
   }
 }
+class TranslationController extends GetxController {
+  final RxString currentLanguage = 'en'.obs;
+
+  void changeLanguage(String languageCode) {
+    currentLanguage.value = languageCode;
+    Get.updateLocale(Locale(languageCode));
+  }
+
+  void toggleLanguage() {
+    final newLanguage = currentLanguage.value == 'en' ? 'hi' : 'en';
+    changeLanguage(newLanguage);
+  }
+}
